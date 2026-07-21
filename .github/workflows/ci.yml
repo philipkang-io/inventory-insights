@@ -1,0 +1,17 @@
+name: API CI
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+  schedule: [{ cron: "0 15 * * *" }]
+  workflow_dispatch:
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Postman CLI
+        run: curl -fsSL https://dl-cli.pstmn.io/install/unix.sh | sh
+      - name: Login
+        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+      - name: Contract run (reports to API Catalog Test tab)
+        run: postman collection run "52509354-e8e84853-fef8-445b-953b-86dddc82196c" -e "52509354-4ef92823-58fa-463d-994e-7376bcdd9862" --report-events
