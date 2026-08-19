@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "355b9288-4b20-4cc2-a96f-0e03631f95f7",
+    "name": "inventory/inventory",
+    "description": "This collection was auto-generated via the API Catalog Onboarding process.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /v1/inventory/SKU-1",
+      "id": "a829216f-f3ce-4aab-8645-2681c871d7cd",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-2",
+      "id": "d75df5e1-c187-4036-a8a8-ae4d6a7305d0",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-3",
+      "id": "08e87481-aa91-4816-b24f-5daab6494ead",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-3",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-4",
+      "id": "1b7fca5c-332f-4b83-8456-797428427055",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-4",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-5",
+      "id": "fe787097-a0a6-4c39-ab9b-7fb5171ef9ab",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-6",
+      "id": "c90c0ba7-1172-4a08-a82d-28c950f47759",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-6",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-7",
+      "id": "d2e55289-3714-4876-83eb-45b40341f451",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-7",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /v1/inventory/SKU-8",
+      "id": "0d96f13b-f71b-44ab-8f57-88cd3e7f9513",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory/SKU-8",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory",
+            "SKU-8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /v1/inventory",
+      "id": "2a9a2482-d9f7-49e9-97b4-f08baa1a9099",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/inventory",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "inventory"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

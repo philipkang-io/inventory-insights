@@ -1,0 +1,384 @@
+{
+  "info": {
+    "_postman_id": "e8e84853-fef8-445b-953b-86dddc82196c",
+    "name": "[Contract] inventory",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "item": [
+        {
+          "name": "inventory",
+          "item": [
+            {
+              "name": "{sku}",
+              "item": [
+                {
+                  "name": "Get inventory item by SKU",
+                  "id": "eb18386a-2ffc-49fb-9f0c-707d2fecdf89",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v1/inventory/:sku",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "inventory",
+                        ":sku"
+                      ],
+                      "variable": [
+                        {
+                          "id": "0865f88b-fa60-4d1f-9a82-df22c7768c12",
+                          "key": "sku",
+                          "value": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "a496d38e-bdf9-4d7a-86cb-9299ef9408a4",
+                      "name": "Inventory item found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/inventory/:sku",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            "inventory",
+                            ":sku"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sku",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"id\": \"string\",\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 1789,\n  \"available\": false,\n  \"updatedAt\": \"2014-11-12T05:10:39.896Z\"\n}"
+                    },
+                    {
+                      "id": "be9dfe9e-4fb3-4b29-90a9-310367916ba2",
+                      "name": "Item not found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/inventory/:sku",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            "inventory",
+                            ":sku"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sku",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"message\": \"string\"\n}"
+                    },
+                    {
+                      "id": "e7a69367-56cd-43fc-a430-7d57f6695287",
+                      "name": "Error occurred",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1/inventory/:sku",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1",
+                            "inventory",
+                            ":sku"
+                          ],
+                          "variable": [
+                            {
+                              "key": "sku",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"message\": \"string\"\n}"
+                    }
+                  ]
+                }
+              ],
+              "id": "a12e8437-7e43-4b3d-ad3f-a890e615356f"
+            },
+            {
+              "name": "Add an inventory item",
+              "id": "d9b4ae3b-5baf-4e50-bd30-98959d487100",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 6165\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/v1/inventory",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "inventory"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0fb801eb-4a5f-4a5e-ac4a-88e9c3627a49",
+                  "name": "Item added successfully",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 6165\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v1/inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "inventory"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"id\": \"string\",\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 1789,\n  \"available\": false,\n  \"updatedAt\": \"2014-11-12T05:10:39.896Z\"\n}"
+                },
+                {
+                  "id": "77bebd73-e1f9-4d22-848f-743b1c9e475c",
+                  "name": "Invalid request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 6165\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v1/inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "inventory"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"message\": \"string\"\n}"
+                },
+                {
+                  "id": "b1b37abf-bd81-464b-ae03-c95e793f8e24",
+                  "name": "Error occurred",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 6165\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/v1/inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "inventory"
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"message\": \"string\"\n}"
+                }
+              ]
+            }
+          ],
+          "id": "95ee07e4-accd-4080-a89d-e3a80d672b13"
+        }
+      ],
+      "id": "e9781f32-8ab5-447a-b1bb-4979566bd69c"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://inventory.inventory.svc.cluster.local:3000"
+    }
+  ]
+}
